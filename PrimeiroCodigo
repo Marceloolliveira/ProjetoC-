@@ -1,0 +1,44 @@
+using System;
+using System.Globalization;
+using System.Linq.Expressions;
+
+namespace PrimeiroProjeto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string produto1 = "Computador";
+            string produto2 = "Mesa de escritorio";
+
+            byte idade = 30;
+            int codigo = 5290;
+            string genero = "Masculino";
+
+            double preco1 = 2100.00;
+            double preco2 = 650.50;
+            double medida = 53.234567;
+
+
+            Console.WriteLine("PRODUTOS:");
+            Console.WriteLine($"{produto1} cujo o preço é $ {preco1} reais");
+            Console.WriteLine($"{produto2} cujo o preço é $ {preco2} reais");
+
+            Console.WriteLine("------------------------------------------------------------");
+
+            Console.WriteLine("REGISTRO:");
+            Console.WriteLine($"{idade} anos de idade, código: {codigo} e gênero: {genero}");
+
+            Console.WriteLine("------------------------------------------------------------");
+
+            Console.WriteLine("MEDIDAS");
+            Console.WriteLine(medida);
+            Console.WriteLine($"{medida:F3}");
+            Console.WriteLine(medida.ToString("F3",CultureInfo.InvariantCulture));
+
+
+
+
+        }
+    }
+}
