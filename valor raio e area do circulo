@@ -1,0 +1,19 @@
+using System;
+using System.Globalization;
+
+namespace Exercicio02 {
+    class Program {
+        static void Main(string[] args) {
+
+                      
+           Console.WriteLine("Execicio 02: Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro\r\ncasas decimais conforme exemplos.\r\n");
+           double R, A, pi = 3.14159;
+
+            R = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            A = pi * R * R;
+
+            Console.WriteLine("A=" + A.ToString("F4", CultureInfo.InvariantCulture));
+        }
+    }
+}
