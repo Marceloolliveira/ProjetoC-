@@ -1,0 +1,62 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Olá, qual figura você quer saber a área?");
+        Console.WriteLine("----------------------------------------------");
+        Console.WriteLine("quadrado");
+        Console.WriteLine("retangulo");
+        Console.WriteLine("paralelograma");
+        Console.WriteLine("triangulo");
+        Console.WriteLine("circulo");
+        Console.WriteLine("trapezio");
+        Console.WriteLine("----------------------------------------------");
+
+        string escolha = Console.ReadLine();
+
+        if (escolha == "quadrado" || escolha == "retangulo" || escolha == "paralelograma")
+        {
+            Console.Write("Insira a base desejada: ");
+            float baseFigura = float.Parse(Console.ReadLine());
+            Console.Write("Insira a altura desejada: ");
+            float alturaFigura = float.Parse(Console.ReadLine());
+            float area = baseFigura * alturaFigura;
+            Console.WriteLine("O valor da área da sua figura é: " + area);
+        }
+        else if (escolha == "triangulo")
+        {
+            Console.Write("Insira a base desejada: ");
+            float baseTriangulo = float.Parse(Console.ReadLine());
+            Console.Write("Insira a altura desejada: ");
+            float alturaTriangulo = float.Parse(Console.ReadLine());
+            float areaTriangulo = baseTriangulo * alturaTriangulo / 2;
+            Console.WriteLine("O valor da área do triângulo é: " + areaTriangulo);
+        }
+        else if (escolha == "circulo")
+        {
+            Console.Write("Insira o valor do raio desejado: ");
+            float raioCirculo = float.Parse(Console.ReadLine());
+            float areaCirculo = 3.14f * (float)Math.Pow(raioCirculo, 2);
+            Console.WriteLine("O valor da área do círculo é: " + areaCirculo);
+        }
+        else if (escolha == "trapezio")
+        {
+            Console.Write("Insira o valor da primeira base desejada: ");
+            float base1Trapezio = float.Parse(Console.ReadLine());
+            Console.Write("Insira o valor da segunda base desejada: ");
+            float base2Trapezio = float.Parse(Console.ReadLine());
+            Console.Write("Insira a altura desejada: ");
+            float alturaTrapezio = float.Parse(Console.ReadLine());
+            float areaTrapezio = (base1Trapezio + base2Trapezio) * alturaTrapezio / 2;
+            Console.WriteLine("O valor da área do trapézio é: " + areaTrapezio);
+        }
+        else
+        {
+            Console.WriteLine("Desculpe, não consegui entender. Insira uma figura válida.");
+        }
+
+        Console.WriteLine("Obrigado por usar nosso programa. :)");
+    }
+}
